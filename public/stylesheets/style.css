@@ -150,6 +150,7 @@ input {
 
 .loginBtns {
 	width: 110px;
+	background-color: red;
 }
 /**********************Id's***********************/
 #aboutUs {

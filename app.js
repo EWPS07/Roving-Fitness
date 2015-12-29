@@ -77,7 +77,7 @@ passport.deserializeUser(Account.deserializeUser());
 // catch 404 and forward to error handler
 
 //new environment
-mongoose.connect('mongodb://heroku_fx89sc3v:jdm2l7c6j1ukeu4mgi6ckesd4o@ds037145.mongolab.com:37145/heroku_fx89sc3v');
+mongoose.connect('mongodb://heroku_vlb94381:qf1e5gh1i6dfdo1gdtocv1gc2b@ds037185.mongolab.com:37185/heroku_vlb94381');
 //merge conflict test comment
 app.use(function(req, res, next) {
   var err = new Error('Not Found');

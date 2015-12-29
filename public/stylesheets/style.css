@@ -151,6 +151,9 @@ input {
 .loginBtns {
 	width: 110px;
 	background-color: red;
+	border: dashed;
+	border-color: black;
+	border-width: 5px;
 }
 /**********************Id's***********************/
 #aboutUs {

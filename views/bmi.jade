@@ -1,17 +1,20 @@
 extends layout
 
 block content
-	div(class='BMI')
-		h1 Quick BMI calculation
-		
+	div(class='BMI', class='container')
+		h1(class='row') Quick BMI calculation
 		br
-		div(class='spacer')
-		
-		form(id="BMI calculation")
-				label Your weight in pounds 
-				input(id ='weight' type='text' name='Weight')
-				label  Your height in inches 
-				input(id ='height' type='text' name='height')
-				br
-				input(id='Calculate' type='submit' value="What's my BMI?")                                                
-		span(id='bmiResult')
+		div(class='row')
+			div(class='col-md-2')
+			form(id="BMI calculation", class='col-md-8')
+					label Your weight in pounds 
+					input(id ='weight' type='text' name='Weight')
+					br
+					label  Your height in inches 
+					input(id ='height' type='text' name='height')
+					br
+					input(id='Calculate' type='submit' value="What's my BMI?")
+			div(class='col-md-2')
+		div(class='row')
+			span(id='bmiResult')
+		br

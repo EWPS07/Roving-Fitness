@@ -2,11 +2,12 @@ extends layout
 
 block content
 	if (!user)
-		p Don't have an account?
-		a(href='/register') Register
+		p(class='loginMsg') Don't have an account?
+		a(href='/register')
+			button.btn.btn-default(type='button', class='loginBtns', id='registerBtn') Register
 		br
 	if (user)
-		p You are currently logged in as #{user.username}
-		button(class='loginBtns')
-			a(href='/logout') Logout
+		p(class='loginMsg') You are currently logged in as #{user.username}
+		a(href='/logout')
+			button.btn.btn-default(type='button', class='loginBtns', id='logoutBtn') Logout
 		br

@@ -7,5 +7,6 @@ block content
 		br
 	if (user)
 		p You are currently logged in as #{user.username}
-		a(href='/logout') Logout
+		button(class='loginBtns')
+			a(href='/logout') Logout
 		br

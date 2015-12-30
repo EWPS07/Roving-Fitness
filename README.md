@@ -3,4 +3,6 @@ So many times, I find myself wondering what I can do to get a good workout in,  
 
 This application uses the express-generator to build the scaffolding. I have used the Mongodb for the databases and passport for user authentification and security.
 
-I still have a large ammount of information and other functionality I plan to add to this application, but for now, I feel like it demonstrates a significant ammount of different technologies. 
+I still have a large ammount of information and other functionality I plan to add to this application, but for now, I feel like it demonstrates a significant ammount of different technologies.
+
+For now, this application is best viewed on a large screen. Responsive design is on the way! 

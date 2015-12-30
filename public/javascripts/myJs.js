@@ -122,6 +122,7 @@ $(document).ready(function() {
 			$('.visualDes').text(pushups.visualDes);
 			$('#Pushups').mouseleave(function() {
 				$('#chestDes').fadeOut('slow');
+				$('.visualDes').fadeOut('slow');
 			});
 		});
 	});
@@ -133,6 +134,7 @@ $(document).ready(function() {
 			$('.visualDes').text(cGPushups.visualDes);
 			$('#CgPushups').mouseleave(function() {
 				$('#chestDes').fadeOut('slow');
+				$('.visualDes').fadeOut('slow');
 			});
 		});
 	});
@@ -144,6 +146,7 @@ $(document).ready(function() {
 			$('.visualDes').text(wGPushups.visualDes);
 			$('#WgPushups').mouseleave(function() {
 				$('#chestDes').fadeOut('slow');
+				$('.visualDes').fadeOut('slow');
 			});
 		});
 	});
@@ -155,6 +158,7 @@ $(document).ready(function() {
 			$('.visualDes').text(sidePushups.visualDes);
 			$('#SidePu').mouseleave(function() {
 				$('#chestDes').fadeOut('slow');
+				$('.visualDes').fadeOut('slow');
 			});
 		});
 	});
@@ -166,6 +170,7 @@ $(document).ready(function() {
 			$('.visualDes').text(stagPushups.visualDes);
 			$('#StagPu').mouseleave(function() {
 				$('#chestDes').fadeOut('slow');
+				$('.visualDes').fadeOut('slow');
 			});
 		});
 	});
@@ -177,6 +182,7 @@ $(document).ready(function() {
 			$('.visualDes').text(sLpushups.visualDes);
 			$('#sLpushups').mouseleave(function() {
 				$('#chestDes').fadeOut('slow');
+				$('.visualDes').fadeOut('slow');
 			});
 		});
 	});

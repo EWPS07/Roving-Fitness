@@ -1,16 +1,12 @@
 html {
-	/*opacity: 0.5;*/
 	color:#55cc11;
 	background-color: black;
 	background
 	font-family: 'Frijole', cursive;
-	/*font-family: 'Short Stack', cursive;*/
-	/*text-shadow: 2px 2px white;*/
 }
 body {
 	text-align: center;
 	padding: 50px;
-	/*font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
 	background-color: black;
 }
 p {	opacity: 1.0;
@@ -31,9 +27,10 @@ button {
 	opacity: 1.0;
 	margin: 10px;
 	padding: 5px;
-	color: #112244;
-	border-style:  groove;
-	border-color: #55cc11;
+	color: black;
+	border-width: 2px;
+	border-style: double;
+	border-color: black;
 	border-radius: 10px;
 	background-color: antiquewhite;
 	height: 40px;
@@ -41,7 +38,6 @@ button {
 	font-family: 'Frijole', cursive;
 	font-size: 20px;
 	font-weight: bold;
-	text-shadow: 2px 2px #55cc11;
 }
 button:hover {
 	opacity: 0.5;
@@ -59,11 +55,6 @@ nav {
 	border-style:  groove;
 	border-color: #55cc11;
 	border-radius: 10px;
-	/*margin: inherit;*/
-	/*width: 1000px;
-	height: 100px;*/
-	/*position: relative;left: 180px;*/
-
 }
 ul {
 	list-style-type: none;
@@ -93,7 +84,8 @@ input {
 .descriptions {
 	color: antiquewhite;
 	font-size: 20px;
-	background-color: #112244;
+	font-family: 'Frijole', cursive;
+	background-color: black;
 	border-style:  groove;
 	border-color: #55cc11;
 	border-radius: 10px;
@@ -125,7 +117,6 @@ input {
 	border-radius: 5px;
 }
 .logoLow {
-
 	border-top-style: groove;
 	border-top-color: antiquewhite;
 	border-right-style: groove;
@@ -155,13 +146,15 @@ input {
 	width: 110px;
 	padding: 5px;
 	color: black;
-	background-color: red;
 }
 .loginMsg {
 	font-family: 'Frijole', cursive;
 }
 .cancel {
 	background-color: red;
+}
+.mainNav {
+	font-size: 40px;
 }
 /**********************Id's***********************/
 #aboutUs {
@@ -183,19 +176,6 @@ input {
 	margin: 10px;
 	text-shadow: 1px 1px red;
 }
-/*#workoutsNav {
-	font-size: 25px;
-	height: 150px;
-}
-#FSH {
-	position: relative;left: 105px;
-}
-#CTBABL {
-	position: relative;right: 35px;
-}
-#PU {
-	text-align: center;
-}*/
 #bmiResult {
 	font-family: 'Frijole', cursive;
 	padding: 10px;
@@ -208,7 +188,7 @@ input {
 }
 #mainNav {
 	color:#55cc11;
-	font-size: 30px;
+	font-size: 40px;
 }
 #workoutsNav {
 	font-size: 12.5px;
@@ -226,9 +206,6 @@ input {
 #itness {
 	position: relative;right: 47px;
 	text-shadow: 2px 2px 2px black;
-}
-#wholeLogo {
-	
 }
 #logoTagline {
 	color: antiquewhite;

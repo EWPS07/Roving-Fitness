@@ -52,7 +52,6 @@ app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-// app.use('/users/users', userRoute);
 app.use('/users', users);
 app.use('/about', about);
 app.use('/bmi', bmi);
@@ -76,9 +75,9 @@ passport.deserializeUser(Account.deserializeUser());
 // mongoose.connect('mongodb://localhost/rfdb');
 // catch 404 and forward to error handler
 
-//new environment
+//production environment
 mongoose.connect('mongodb://heroku_vlb94381:qf1e5gh1i6dfdo1gdtocv1gc2b@ds037185.mongolab.com:37185/heroku_vlb94381');
-//merge conflict test comment
+
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
@@ -108,9 +107,5 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
-// app.listen(3000);
-// app.use('/users', users);
-
 
 module.exports = app;

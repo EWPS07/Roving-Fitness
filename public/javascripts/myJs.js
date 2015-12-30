@@ -1,14 +1,15 @@
+//Workout and exercise constructors
 var Workout = function(type, exercises) {
 	this.type = type;
 	this.exercises = exercises;
 };
- Workout.prototype.test = 'funny';
 
 var exercises = function(name, description, visualDes) {
 	this.name = name;
 	this.description = description;
 	this.visualDes = visualDes;
 };
+
 //chest exercises
 var pushups = new exercises('pushups', 'Body in a straight line, feet together, arms shoulder width apart. Lower yourself to the floor till upper arms are parallel with the floor.', 'pushups visual description link here');
 var cGPushups = new exercises('close-grip pushups', 'Body in a straight line, feet together, place hands close together. Lower yourself to the floor till upper arms are parallel with the floor', 'close grip pushups visual description link here');
@@ -16,10 +17,12 @@ var wGPushups = new exercises('wide-grip pushups', 'Body in a straight line, fee
 var sidePushups = new exercises('side pushups', 'Lying on your side, with your knees bent, floor side arm across your belly. Other arm in-line with pectorals. Perform a pushup, raising your boddy off of the ground.','side pushups visualDes link here');
 var stagPushups = new exercises('staggered-arm pushups', 'Body in a straight line, feet together, place hands about shoulder width apart with one hand forward and one back. Alternate hands each repetition. Lower yourself to the floor till upper arms are parallel with the floor', 'staggered army pushupsvisual description link here');
 var sLPushups = new exercises('single-leg pushups', 'Body in a straight line, one foot off the ground, alternated each repetition. Place hands shoulder width apart. Lower yourself to the ground till upper arms are parallel with the floor.', 'single leg pushups visual description link here');
+
 //triceps exercises
 var diamondPushups = new exercises('diamond pushups', 'Body in a straight line, make a diamond shape with index fingers and thumbs. Lower yourself to the floor till upper arms are parallel with floor. If it is too difficult, go to your knees.', 'visual description link here');
 var dips = new exercises('dips', 'Arms about shoulder width apart, behind your back with feet extended in front of you. Bend arms at the elbows, concentrating on triceps.', 'visual description link here');
 var triExtensions = new exercises('tricep extensions', 'Body in a straight line, facing the wall. Hands flat on the wall. Bring feet back till body is at a 45 degree angle. Bending at the elbow, extending arms to push body away from the wall.', 'visual description link here');
+
 //back exercises
 var RevSnowAngels = new exercises('reverse snow angels', 'Lying on the floor, with head facing downward, arms extended forward. Slowly bring hands backwards, towards the buttocks, keeping arms straight, and not touching the ground, to pinch the center of the back. Do not lift head off of the floor.', 'visual description link here');
 var goodMornings = new exercises('good mornings', 'With feet about shoulder width apart, back straight, core tight, looking forward, bend, pushing your glutes back untill your back is parallel with the floor. Maintain a straight back, tight core, and always look forward.', 'visual description link here');
@@ -27,17 +30,20 @@ var supermans = new exercises('supermans', 'Lying on the floor, belly down, arms
 var bridge = new exercises('bridge', 'Lying back down, legs bent at the knees(as if you were doing situps), raise hips off the floor towards the sky, keeping shoulders planted on the ground.');
 var pPlacePushups = new exercises('pike place pushups', 'Hands and feet on the floor, legs straight, back straight, create a V shape with your body(Bent, with buttocks in the air). Slight bend in the elbows. Bring head to the floor by bending elbows, while maintaining the V shape.', 'visual description link here');
 var swimmer = new exercises('swimmer', 'Lying belly down, arms and legs straight, with arms extended infront of you, lift right arm and left leg a few inches off the ground while keeping them straight. Alternate hands and feet every repetition.', 'visual description link here');
+
 //biceps exercises
 var curls = new exercises('curls', 'Grab anything you can hold, stand up straight, palms forward, lift weight only by bending arm at the elow. If it is too difficult, grab something lighter.', 'visual description link here');
 var rows = new exercises('rows', 'Body in a straight line, back towards the ground. Hang under something stable that can support your weight. Place hands more than shoulder width apart, pull yourself towards what you are hanging from.', 'visual description link here');
 var pullups = new exercises('pullups', 'Hang from a bar or something stable where good grip can be acheived, with palms facing forward. Hands should be wider than shoulder width. Pull yourself up till chin has reached the bar.', 'visual description link here');
 var chinups = new exercises('chinups', 'Much like the pullup, you will need to hang from a bar. This time palms facing backwards, and about shoulder width apart. Pull yourself up untill chin has passed the bar.', 'visual description link here');
+
 //legs exercises
 var airSquats = new exercises('air squats', 'Feet shoulder width apart, back straight, facing forward, arms crossed over chest. Weight should be on your heels. Bend your knees untill thighs are parallel with the floor. Weight should be on heels the whole time(You should be able to wiggle your toes throughout the entire exercise).', 'visual description link here');
 var lunges = new exercises('lunges', 'While standing, take an exaggerated step forward, bringing the stationary knee to the ground. Do not let your front knee extend past your toes.', 'visual description link here');
 var calfRaises = new exercises('calf raises', 'Feet together, hold something with some weight to it if you like. Bring your heels off the ground, pressing down with your toes and the balls of your feet.', 'visual description link here');
 var boxJumps = new exercises('box jumps', 'Find a stable, elevated surface. With one motion, both feet at the same time, jump up to the surface, then stand up straight, step down to avoid injury.', 'visual description link here');
 var donkeyKicks = new exercises('donkey kicks', 'Start on your hands and knees, with your back straight. Bring one leg at a time straight backwards and up(like a donkey kicks). Alternate legs every repetition.', 'visual description link here');
+
 //abs exercises
 var crunches = new exercises('crunches', 'Lying on your back, with hands loosely on the back of your head, feet off the ground with knees bent. Tighten your abs to bring your shoulders off the ground', 'visual description link here');
 var obliqueCrunches = new exercises('oblique crunches', 'These are performed like regular crunches, but attempt to bring your right elbow to your left side, and right elbow to your left.', 'visual description link here');
@@ -47,6 +53,7 @@ var legLifts = new exercises('leg lifts', 'Lying on your back, hands under your 
 var flutterKicks = new exercises('flutter kicks', 'Lying on your back, hands under your buttocks, bring legs up to 45 degrees and back down to just above the ground. Alternate legs as you would when you walk.', 'visual description link here');
 var legClimbs = new exercises('leg climbs', 'Lying on your back, one leg bent at the knee, the other extended up towards the sky. Use your arms and abs to climb the extended leg, attempting to reach your foot.', 'visual description link here');
 var dirtyDogs = new exercises('dirty dogs', 'Start on your hands and knees, back straight. Bring your right knee outward, keeping your knee bent. Repeat for left side.', 'visual description link here');
+
 //shoulder exercises
 var FeShoulderPushups = new exercises('feet-elevated shoulder pushups', 'Hands on the floor, feet elevated(bed works perfectly)legs straight, back straight, create a V shape with your body(Bent, with buttocks in the air). Slight bend in the elbows. Bring head to the floor by bending elbows, while maintaining the V shape.', 'visual description link here');
 var crabWalk = new exercises('crab walk', 'From a seated position on the ground, lift buttocks up, use feet and hands to scurry across the floor.', 'visual description link here');
@@ -54,6 +61,7 @@ var wGpullups = new exercises('wide-grip pullups', 'The same as a regular pullup
 var hStandPushups = new exercises('hand-stand wall pushups', 'Start with hands on the floor, feet towards the wall. Walk your feet up the wall untill almost verticle, lower head to the floor by bending arms at the elbow.', 'visual description link here');
 var oneArmPushups = new exercises('one-arm pushups', 'Hands shoulder width apart, legs wider than shoulder width apart for stability. Place one arm behind your back and perform a pushup.', 'visual description link here');
 var shoulderPushups = new exercises('shoulder pushups', 'Hands and feet on the floor, legs straight, back straight, create a V shape with your body(Bent, with buttocks in the air). Slight bend in the elbows. Bring head to the floor by bending elbows, while maintaining the V shape.', 'visual description link here');
+
 //forearms exercises
 var chairUps = new exercises('chair-ups', 'Lying on your belly, arms extended out infront of you, grab hold of the legs of a chair. Use your forearms to lift the chair a few inches off the ground, lower it back down but do not touch it to the floor.', 'visual description link here');
 var staticChairUps = new exercises('static chair-ups', 'Like the chair-up, but hold it in position, instead of repetitions.', 'visual description link here');
@@ -61,6 +69,7 @@ var twistedSChairUps = new exercises('twisted static chair-ups', 'Like the stati
 var fingerHangs = new exercises('finger hangs', 'Hang from a bar, or something else stable. Use only your fingers. Remove and add fingers to work different muscles in the forearms.', 'visual description link here');
 var fingerPushups = new exercises('finger pushups', 'Regular pushup position, spread fingers wide and use them to lift your body weight(go to knees if it is too difficult).', 'visual description link here');
 var forearmCurls = new exercises('forearm curls', 'Grab something with some weight to it, bending your arm at the wrist, curl the weight.', 'visual description link here');
+
 //cardio exercises
 var burpees = new exercises('burpees', 'From a standing position, drop down to pushup position, perform a pushup, eplode up, performing a jump, extending arms above head and clap, land in a standing position.', 'visual description link here');
 var walkouts = new exercises('walkouts', 'From a standing position, bring your hands to the floor and walk them out infront of you untill you are in pushup position, perform a pushup if you like, then walk them back till you are standing.', 'visual description link here');
@@ -77,6 +86,7 @@ var shouldersWorkout = new Workout('shoulders', [FeShoulderPushups.name,' ' + cr
 var forearmsWorkout = new Workout('forearms', [chairUps.name,' ' + staticChairUps.name,' ' + twistedSChairUps.name,' ' + fingerHangs.name,' ' + fingerPushups.name,' ' + forearmCurls.name]);
 var cardioWorkout = new Workout('cardio', [burpees.name, ' ' + walkouts.name, ' ' + jumpingLunges.name, ' ' + pushups.name, ' ' + weightedSitups.name, ' ' + pullups.name]);
 
+//BMI Calculation
 	$(document).ready(function() {
 		$('#bmiResult').hide();
 	});
@@ -99,6 +109,7 @@ var cardioWorkout = new Workout('cardio', [burpees.name, ' ' + walkouts.name, ' 
 			$('#bmiResult').show().fadeIn('slow').text('You have a BMI of ' + BMI + '. You have an obese status.');
 		}
 	});
+
 //**********************Chest page**********************
 $(document).ready(function() {
 	$('#chestDes').hide();('fast');
@@ -719,7 +730,7 @@ $(document).ready(function() {
 		});
 	});
 });
-//********************stopwatch*************************
+//********************Stopwatch*************************
 	var time = 0;
 	var running = 0;
 

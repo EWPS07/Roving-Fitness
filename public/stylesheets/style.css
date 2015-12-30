@@ -71,6 +71,7 @@ label {
 h1 {
 	font-family: 'Frijole', cursive;
 	color: antiquewhite;
+	text-shadow:1.5px 1.5px 1.5px #55cc11;
 }
 input {
 	margin: 5px;
@@ -174,7 +175,6 @@ input {
 	border-radius: 10px;
 	background-color: antiquewhite;
 	margin: 10px;
-	text-shadow: 1px 1px red;
 }
 #bmiResult {
 	font-family: 'Frijole', cursive;

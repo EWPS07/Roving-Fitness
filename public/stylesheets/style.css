@@ -91,6 +91,9 @@ input {
 	border-color: #55cc11;
 	border-radius: 10px;
 }
+.descriptionSpace {
+	height: 100px;
+}
 .spaceHolder {
 	height: 135px;
 }

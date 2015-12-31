@@ -47,7 +47,7 @@ var donkeyKicks = new exercises('donkey kicks', 'Start on your hands and knees, 
 //abs exercises
 var crunches = new exercises('crunches', 'Lying on your back, with hands loosely on the back of your head, feet off the ground with knees bent. Tighten your abs to bring your shoulders off the ground', 'visual description link here');
 var obliqueCrunches = new exercises('oblique crunches', 'These are performed like regular crunches, but attempt to bring your right elbow to your left side, and right elbow to your left.', 'visual description link here');
-var weightedSitups = new exercises('weighted situps', 'Grab something with some weight to it. Lying on your back, with knees bent and feet flat on the floor, use your abs to sit up straight. If it is too difficult, do it without weight', 'visual description link here');
+var weightedSitups = new exercises('weighted situps', 'Grab something with some weight to it, or do them without weights if you choose. Lying on your back, with knees bent and feet flat on the floor, use your abs to sit up straight. If it is too difficult, do it without weight', 'visual description link here');
 var russianTwists = new exercises('russian twists', 'While sitting on the floor, knees bent, feet off the ground, slightly leaning back, hands together, twist from left and right touching the floor with hands on either side. Do not let your feet touch the ground.', 'visual description link here');
 var legLifts = new exercises('leg lifts', 'Lying on your back, hands under your buttocks, legs straight and together, lift them to 90 degrees, then bring them back down to just above the ground, but not touching.', 'visual description link here');
 var flutterKicks = new exercises('flutter kicks', 'Lying on your back, hands under your buttocks, bring legs up to 45 degrees and back down to just above the ground. Alternate legs as you would when you walk.', 'visual description link here');
@@ -86,11 +86,10 @@ var shouldersWorkout = new Workout('shoulders', [FeShoulderPushups.name,' ' + cr
 var forearmsWorkout = new Workout('forearms', [chairUps.name,' ' + staticChairUps.name,' ' + twistedSChairUps.name,' ' + fingerHangs.name,' ' + fingerPushups.name,' ' + forearmCurls.name]);
 var cardioWorkout = new Workout('cardio', [burpees.name, ' ' + walkouts.name, ' ' + jumpingLunges.name, ' ' + pushups.name, ' ' + weightedSitups.name, ' ' + pullups.name]);
 
-//BMI Calculation
 	$(document).ready(function() {
 		$('#bmiResult').hide();
 	});
-	$('#Calculate').on('click', function(e) {
+	$('#Calculate').click(function(e) {
 		e.preventDefault();
 		var newWeight = $('#weight').val() * 703;
 		var newHeight = $('#height').val() * $('#height').val();
@@ -109,167 +108,212 @@ var cardioWorkout = new Workout('cardio', [burpees.name, ' ' + walkouts.name, ' 
 			$('#bmiResult').show().fadeIn('slow').text('You have a BMI of ' + BMI + '. You have an obese status.');
 		}
 	});
-
 //**********************Chest page**********************
 $(document).ready(function() {
-	$('#chestDes').hide();('fast');
+	$('.descriptions').hide('fast');
 });
 
 $(document).ready(function() {
-	$('#Pushups').on('click', function() {
-		$('#chestDes').slideToggle('slow', function() {
-			$('#chestDes').text(pushups.description).finish();
-			$('.visualDes').text(pushups.visualDes);
-			$('#Pushups').mouseleave(function() {
-				$('#chestDes').fadeOut('slow');
-				$('.visualDes').fadeOut('slow');
+	$('#Pushups').click(function() {
+		$('.descriptions').show(function() {
+			$('#chestDes, .visualDes').slideDown('slow', function() {
+				$('#chestDes').text(pushups.description);
+				$('.visualDes').text(pushups.visualDes);
+				$('#Pushups').mouseleave(function() {
+					$('#chestDes, .visualDes').slideUp('slow');
+					// $('.visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#CgPushups').on('click', function() {
-		$('#chestDes').slideToggle('slow', function() {
-			$('#chestDes').text(cGPushups.description).finish();
-			$('.visualDes').text(cGPushups.visualDes);
-			$('#CgPushups').mouseleave(function() {
-				$('#chestDes').fadeOut('slow');
-				$('.visualDes').fadeOut('slow');
+	$('#CgPushups').click(function() {
+		$('.descriptions').show(function() {	
+			$('#chestDes, .visualDes').slideDown('slow', function() {
+				$('#chestDes').text(cGPushups.description);
+				$('.visualDes').text(cGPushups.visualDes);
+				$('#CgPushups').mouseleave(function() {
+					$('#chestDes, .visualDes').slideUp('slow');
+					// $('.visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#WgPushups').on('click', function() {
-		$('#chestDes').slideToggle('slow', function() {
-			$('#chestDes').text(wGPushups.description).finish();
-			$('.visualDes').text(wGPushups.visualDes);
-			$('#WgPushups').mouseleave(function() {
-				$('#chestDes').fadeOut('slow');
-				$('.visualDes').fadeOut('slow');
+	$('#WgPushups').click(function() {
+		$('.descriptions').show(function() {
+			$('#chestDes, .visualDes').slideDown('slow', function() {
+				$('#chestDes').text(wGPushups.description);
+				$('.visualDes').text(wGPushups.visualDes);
+				$('#WgPushups').mouseleave(function() {
+					$('#chestDes, .visualDes').slideUp('slow');
+					// $('.visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#SidePu').on('click', function() {
-		$('#chestDes').slideToggle('slow', function() {
-			$('#chestDes').text(sidePushups.description).finish();
-			$('.visualDes').text(sidePushups.visualDes);
-			$('#SidePu').mouseleave(function() {
-				$('#chestDes').fadeOut('slow');
-				$('.visualDes').fadeOut('slow');
+	$('#SidePu').click(function() {
+		$('.descriptions').show(function() {
+			$('#chestDes, .visualDes').slideDown('slow', function() {
+				$('#chestDes').text(sidePushups.description);
+				$('.visualDes').text(sidePushups.visualDes);
+				$('#SidePu').mouseleave(function() {
+					$('#chestDes, .visualDes').slideUp('slow');
+					// $('.visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#StagPu').on('click', function() {
-		$('#chestDes').slideToggle('slow', function() {
-			$('#chestDes').text(stagPushups.description).finish();
-			$('.visualDes').text(stagPushups.visualDes);
-			$('#StagPu').mouseleave(function() {
-				$('#chestDes').fadeOut('slow');
-				$('.visualDes').fadeOut('slow');
+	$('#StagPu').click(function() {
+		$('.descriptions').show(function() {
+			$('#chestDes, .visualDes').slideDown('slow', function() {
+				$('#chestDes').text(stagPushups.description);
+				$('.visualDes').text(stagPushups.visualDes);
+				$('#StagPu').mouseleave(function() {
+					$('#chestDes, .visualDes').slideUp('slow');
+					// $('.visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#sLpushups').on('click', function() {
-		$('#chestDes').slideToggle('slow', function() {
-			$('#chestDes').text(sLPushups.description);
-			$('.visualDes').text(sLpushups.visualDes);
-			$('#sLpushups').mouseleave(function() {
-				$('#chestDes').fadeOut('slow');
-				$('.visualDes').fadeOut('slow');
+	$('#sLpushups').click(function() {
+		$('.descriptions').show(function() {
+			$('#chestDes, .visualDes').slideDown('slow', function() {
+				$('#chestDes').text(sLPushups.description);
+				$('.visualDes').text(sLpushups.visualDes);
+				$('#sLpushups').mouseleave(function() {
+					$('#chestDes, .visualDes').slideUp('slow');
+					// $('.visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 //*********************Triceps page*********************
 $(document).ready(function() {
-	$('#triDes').hide();('fast');
+	$('.descriptions').hide('fast');
 });
 
 $(document).ready(function() {
-	$('#diamond').on('click', function() {
-		$('#triDes').slideToggle('slow', function() {
-			$('#triDes').text(diamondPushups.description).finish();
-			$('.visualDes').text(diamondPushups.visualDes);
-			$('#diamond').mouseleave(function() {
-				$('#treDes').fadeOut('slow');
+	$('#diamond').click(function() {
+		$('.descriptions').show(function() {
+			$('#triDes, .visualDes').slideDown('slow', function() {
+				$('#triDes').text(diamondPushups.description);
+				$('.visualDes').text(diamondPushups.visualDes);
+				$('#diamond').mouseleave(function() {
+					$('#triDes, .visualDes').slideUp('slow');
+					// $('.visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#dips').on('click', function() {
-		$('#triDes').slideToggle('slow', function() {
-			$('#triDes').text(dips.description).finish();
-			$('.visualDes').text(dips.visualDes);
-			$('#dips').mouseleave(function() {
-				$('#triDes').fadeOut('slow');
+	$('#dips').click( function() {
+		$('.descriptions').show(function() {
+			$('#triDes, .visualDes').slideDown('slow', function() {
+				$('#triDes').text(dips.description);
+				$('.visualDes').text(dips.visualDes);
+				$('#dips').mouseleave(function() {
+					$('#triDes, .visualDes').slideUp('slow');
+					// $('.visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#triEx').on('click', function() {
-		$('#triDes').slideToggle('slow', function() {
-			$('#triDes').text(triExtensions.description).finish();
-			$('.visualDes').text(triExtensions.visualDes);
-			$('#triEx').mouseleave(function() {
-				$('#triDes').fadeOut('slow');
+	$('#triEx').click(function() {
+		$('.descriptions').show(function() {
+			$('#triDes, .visualDes').slideDown('slow', function() {
+				$('#triDes').text(triExtensions.description);
+				$('.visualDes').text(triExtensions.visualDes);
+				$('#triEx').mouseleave(function() {
+					$('#triDes, .visualDes').slideUp('slow');
+					// $('.visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
-//**********************Biceps page*********************
+// // //**********************Biceps page*********************
 $(document).ready(function() {
-	$('#biDes').hide();('fast');
+	$('.descriptions').hide('fast');
 });
 
 $(document).ready(function() {
-	$('#curls').on('click', function() {
-		$('#biDes').slideToggle('slow', function() {
-			$('#biDes').text(curls.description).finish();
-			$('.visualDes').text(curls.visualDes);
-			$('#curls').mouseleave(function() {
-				$('#biDes').fadeOut('slow');
+	$('#curls').click(function() {
+		$('.descriptions').show(function() {
+			$('#biDes, .visualDes').slideDown('slow', function() {
+				$('#biDes').text(curls.description);
+				$('.visualDes').text(curls.visualDes);
+				$('#curls').mouseleave(function() {
+					$('#biDes, .visualDes').slideUp('slow');
+					// $('.visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#rows').on('click', function() {
-		$('#biDes').slideToggle('slow', function() {
-			$('#biDes').text(rows.description).finish();
-			$('.visualDes').text(rows.visualDes);
-			$('#rows').mouseleave(function() {
-				$('#biDes').fadeOut('slow');
+	$('#rows').click(function() {
+		$('.descriptions').show(function() {
+			$('#biDes, .visualDes').slideDown('slow', function() {
+				$('#biDes').text(rows.description);
+				$('.visualDes').text(rows.visualDes);
+				$('#rows').mouseleave(function() {
+					$('#biDes, .visualDes').slideUp('slow');
+					// $('.visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#pullups').on('click', function() {
-		$('#biDes').slideToggle('slow', function() {
-			$('#biDes').text(pullups.description).finish();
-			$('.visualDes').text(pullups.visualDes);
-			$('#pullups').mouseleave(function() {
-				$('#biDes').fadeOut('slow');
+	$('#pullups').click(function() {
+		$('.descriptions').show(function() {
+			$('#biDes, .visualDes').slideDown('slow', function() {
+				$('#biDes').text(pullups.description);
+				$('.visualDes').text(pullups.visualDes);
+				$('#pullups').mouseleave(function() {
+					$('#biDes, .visualDes').slideUp('slow');
+					// $('.visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#chinups').on('click', function() {
-		$('#biDes').slideToggle('slow', function() {
-			$('#biDes').text(chinups.description);
-			$('.visualDes').text(chinups.visualDes);
-			$('#chinups').mouseleave(function() {
-				$('#biDes').fadeOut('slow');
+	$('#chinups').click(function() {
+		$('.descriptions').show(function() {
+			$('#biDes, .visualDes').slideDown('slow', function() {
+				$('#biDes').text(chinups.description);
+				$('.visualDes').text(chinups.visualDes);
+				$('#chinups').mouseleave(function() {
+					$('#biDes, .visualDes').slideUp('slow');
+					// $('.visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
@@ -277,466 +321,578 @@ $(document).ready(function() {
 //***********************Abs page***********************
 
 $(document).ready(function() {
-	$('#absDes').hide();('fast');
+	$('.descriptions').hide('fast');
 });
 
 $(document).ready(function() {
-	$('#crunches').on('click', function() {
-		$('#absDes').slideToggle('slow', function() {
-			$('#absDes').text(crunches.description).finish();
-			$('.visualDes').text(crunches.visualDes);
-			$('#crunches').mouseleave(function() {
-				$('#absDes').fadeOut('slow');
+	$('#crunches').click(function() {
+		$('.descriptions').show(function() {
+			$('#absDes, .visualDes').slideDown('slow', function() {
+				$('#absDes').text(crunches.description);
+				$('.visualDes').text(crunches.visualDes);
+				$('#crunches').mouseleave(function() {
+					$('#absDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#obCrunches').on('click', function() {
-		$('#absDes').slideToggle('slow', function() {
-			$('#absDes').text(obliqueCrunches.description).finish();
-			$('.visualDes').text(obliqueCrunches.visualDes);
-			$('#obCrunches').mouseleave(function() {
-				$('#absDes').fadeOut('slow');
+	$('#obCrunches').click(function() {
+		$('.descriptions').show(function() {
+			$('#absDes, .visualDes').slideDown('slow', function() {
+				$('#absDes, .visualDes').text(obliqueCrunches.description);
+				$('.visualDes').text(obliqueCrunches.visualDes);
+				$('#obCrunches').mouseleave(function() {
+					$('#absDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#weightSu').on('click', function() {
-		$('#absDes').slideToggle('slow', function() {
-			$('#absDes').text(weightedSitups.description).finish();
-			$('.visualDes').text(weightedSitups.visualDes);
-			$('#weightSu').mouseleave(function() {
-				$('#absDes').fadeOut('slow');
+	$('#weightSu').click(function() {
+		$('.descriptions').show(function() {
+			$('#absDes, .visualDes').slideDown('slow', function() {
+				$('#absDes, .visualDes').text(weightedSitups.description);
+				$('.visualDes').text(weightedSitups.visualDes);
+				$('#weightSu').mouseleave(function() {
+					$('#absDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#RussTwist').on('click', function() {
-		$('#absDes').slideToggle('slow', function() {
-			$('#absDes').text(russianTwists.description);
-			$('.visualDes').text(russianTwists.visualDes);
-			$('#RussTwist').mouseleave(function() {
-				$('#absDes').fadeOut('slow');
+	$('#RussTwist').click(function() {
+		$('.descriptions').show(function() {
+			$('#absDes, .visualDes').slideDown('slow', function() {
+				$('#absDes').text(russianTwists.description);
+				$('.visualDes').text(russianTwists.visualDes);
+				$('#RussTwist').mouseleave(function() {
+					$('#absDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#legLifts').on('click', function() {
-		$('#absDes').slideToggle('slow', function() {
-			$('#absDes').text(legLifts.description).finish();
-			$('.visualDes').text(legLifts.visualDes);
-			$('#legLifts').mouseleave(function() {
-				$('#absDes').fadeOut('slow');
+	$('#legLifts').click(function() {
+		$('.descriptions').show(function() {
+			$('#absDes, .visualDes').slideDown('slow', function() {
+				$('#absDes').text(legLifts.description);
+				$('.visualDes').text(legLifts.visualDes);
+				$('#legLifts').mouseleave(function() {
+					$('#absDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#fluttKick').on('click', function() {
-		$('#absDes').slideToggle('slow', function() {
-			$('#absDes').text(flutterKicks.description).finish();
-			$('.visualDes').text(flutterKicks.visualDes);
-			$('#fluttKick').mouseleave(function() {
-				$('#absDes').fadeOut('slow');
+	$('#fluttKick').click(function() {
+		$('.descriptions').show(function() {
+			$('#absDes, .visualDes').slideDown('slow', function() {
+				$('#absDes').text(flutterKicks.description);
+				$('.visualDes').text(flutterKicks.visualDes);
+				$('#fluttKick').mouseleave(function() {
+					$('#absDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#legClimb').on('click', function() {
-		$('#absDes').slideToggle('slow', function() {
-			$('#absDes').text(legClimbs.description);
-			$('.visualDes').text(legClimbs.visualDes);
-			$('#legClimb').mouseleave(function() {
-				$('#absDes').fadeOut('slow');
+	$('#legClimb').click(function() {
+		$('.descriptions').show(function() {
+			$('#absDes, .visualDes').slideDown('slow', function() {
+				$('#absDes').text(legClimbs.description);
+				$('.visualDes').text(legClimbs.visualDes);
+				$('#legClimb').mouseleave(function() {
+					$('#absDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#dirtyDog').on('click', function() {
-		$('#absDes').slideToggle('slow', function() {
-			$('#absDes').text(dirtyDogs.description);
-			$('.visualDes').text(dirtyDogs.visualDes);
-			$('#dirtyDog').mouseleave(function() {
-				$('#absDes').fadeOut('slow');
+	$('#dirtyDog').click(function() {
+		$('.descriptions').show(function() {
+			$('#absDes, .visualDes').slideDown('slow', function() {
+				$('#absDes').text(dirtyDogs.description);
+				$('.visualDes').text(dirtyDogs.visualDes);
+				$('#dirtyDog').mouseleave(function() {
+					$('#absDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
-//**********************Back page***********************
+// //**********************Back page***********************
 
 $(document).ready(function() {
-	$('#backDes').hide();('fast');
+	$('.descriptions').hide('fast');
 });
+$(document).ready(function() {
+	$('#RevSnowAngels').click(function() {
+		$('.descriptions').show(function() {	
+			$('#backDes, .visualDes').slideDown('slow', function() {
+				$('#backDes').text(RevSnowAngels.description);
+				$('.visualDes').text(RevSnowAngels.visualDes);
+				$('#RevSnowAngels').mouseleave(function() {
+					$('#backDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});	
+	});
+});
+$(document).ready(function() {
+	$('#goodMornings').click(function() {
+		$('.descriptions').show(function() {
+			$('#backDes, .visualDes').slideDown('slow', function() {
+				$('#backDes').text(goodMornings.description);
+				$('.visualDes').text(goodMornings.visualDes);
+				$('#goodMornings').mouseleave(function() {
+					$('#backDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#supermans').click(function() {
+		$('.descriptions').show(function() {
+			$('#backDes, .visualDes').slideDown('slow', function() {
+				$('#backDes').text(supermans.description);
+				$('.visualDes').text(supermans.visualDes);
+				$('#supermans').mouseleave(function() {
+					$('#backDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#dolphinKicks').click(function() {
+		$('.descriptions').show(function() {	
+			$('#backDes, .visualDes').slideToggle('slow', function() {
+				$('#backDes').text(dolphinKicks.description);
+				$('.visualDes').text(dolphinKicks.visualDes);
+				$('#dolphinKicks').mouseleave(function() {
+					$('#backDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#bridge').click(function() {
+		$('.descriptions').show(function() {	
+			$('#backDes, .visualDes').slideToggle('slow', function() {
+				$('#backDes').text(bridge.description);
+				$('.visualDes').text(bridge.visualDes);
+				$('#bridge').mouseleave(function() {
+					$('#backDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#pPlacePushups').click(function() {
+		$('.descriptions').show(function() {	
+			$('#backDes, .visualDes').slideDown('slow', function() {
+				$('#backDes').text(pPlacePushups.description);
+				$('.visualDes').text(pPlacePushups.visualDes);
+				$('#pPlacePushups').mouseleave(function() {
+					$('#backDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#swimmer').click(function() {
+		$('.descriptions').show(function() {	
+			$('#backDes, .visualDes').slideDown('slow', function() {
+				$('#backDes').text(swimmer.description);
+				$('.visualDes').text(swimmer.visualDes);
+				$('#swimmer').mouseleave(function() {
+					$('#backDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#rows').click(function() {
+		$('.descriptions').show(function() {
+			$('#backDes, .visualDes').slideDown('slow', function() {
+				$('#backDes').text(rows.description);
+				$('.visualDes').text(rows.visualDes);
+				$('#rows').mouseleave(function() {
+					$('#backDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+// //**********************Legs page***********************
+$(document).ready(function() {
+	$('.descriptions').hide('fast');
+});
+$(document).ready(function() {
+	$('#airSquats').click(function() {
+		$('.descriptions').show(function() {
+			$('#legDes, .visualDes').slideDown('slow', function() {
+				$('#legDes').text(airSquats.description);
+				$('.visualDes').text(airSquats.visualDes);
+				$('#airSquats').mouseleave(function() {
+					$('#legDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#lunges').click(function() {
+		$('.descriptions').show(function() {
+			$('#legDes, .visualDes').slideDown('slow', function() {
+				$('#legDes').text(lunges.description);
+				$('.visualDes').text(lunges.visualDes);
+				$('#lunges').mouseleave(function() {
+					$('#legDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#calfRaises').click(function() {
+		$('.descriptions').show(function() {
+			$('#legDes, .visualDes').slideDown('slow', function() {
+				$('#legDes').text(calfRaises.description);
+				$('.visualDes').text(calfRaises.visualDes);
+				$('#calfRaises').mouseleave(function() {
+					$('#legDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#boxJumps').click(function() {
+		$('.descriptions').show(function() {
+			$('#legDes, .visualDes').slideDown('slow', function() {
+				$('#legDes').text(boxJumps.description);
+				$('.visualDes').text(boxJumps.visualDes);
+				$('#boxJumps').mouseleave(function() {
+					$('#legDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#donkeyKicks').click(function() {
+		$('.descriptions').show(function() {
+			$('#legDes, .visualDes').slideDown('slow', function() {
+				$('#legDes').text(donkeyKicks.description);
+				$('.visualDes').text(donkeyKicks.visualDes);
+				$('#donkeyKicks').mouseleave(function() {
+					$('#legDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+// //********************Forearms page*********************
+$(document).ready(function() {
+	$('.descriptions').hide('fast');
+});
+$(document).ready(function() {
+	$('#chairUps').click(function() {
+		$('.descriptions').show(function() {
+			$('#foreDes, .visualDes').slideDown('slow', function() {
+				$('#foreDes').text(chairUps.description);
+				$('.visualDes').text(chairUps.visualDes);
+				$('#chairUps').mouseleave(function() {
+					$('#foreDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#staticChairups').click(function() {
+		$('.descriptions').show(function() {
+			$('#foreDes, .visualDes').slideDown('slow', function() {
+				$('#foreDes').text(staticChairUps.description);
+				$('.visualDes').text(staticChairUps.visualDes);
+				$('#staticChairups').mouseleave(function() {
+					$('#foreDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#twistedSChairUps').click(function() {
+		$('.descriptions').show(function() {
+			$('#foreDes, .visualDes').slideDown('slow', function() {
+				$('#foreDes').text(twistedSChairUps.description);
+				$('.visualDes').text(twistedSChairUps.visualDes);
+				$('#twistedSChairUps, .visualDes').mouseleave(function() {
+					$('#foreDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#fingerHangs').click(function() {
+		$('.descriptions').show(function() {
+			$('#foreDes, .visualDes').slideDown('slow', function() {
+				$('#foreDes').text(fingerHangs.description);
+				$('.visualDes').text(fingerHangs.visualDes);
+				$('#fingerHangs').mouseleave(function() {
+					$('#foreDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#fingerPushups').click(function() {
+		$('.descriptions').show(function() {
+			$('#foreDes, .visualDes').slideDown('slow', function() {
+				$('#foreDes').text(fingerPushups.description);
+				$('.visualDes').text(fingerPushups.visualDes);
+				$('#fingerPushups').mouseleave(function() {
+					$('#foreDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#forearmCurls').click(function() {
+		$('.descriptions').show(function() {
+			$('#foreDes, .visualDes').slideDown('slow', function() {
+				$('#foreDes').text(forearmCurls.description);
+				$('.visualDes').text(forearmCurls.visualDes);
+				$('#forearmCurls').mouseleave(function() {
+					$('#foreDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+// //********************Shoulders page********************
+$(document).ready(function() {
+	$('.descriptions').hide('fast');
+});
+$(document).ready(function() {
+	$('#FeShoulderPushups').click(function() {
+		$('.descriptions').show(function() {
+			$('#shoulDes, .visualDes').slideDown('slow', function() {
+				$('#shoulDes').text(FeShoulderPushups.description);
+				$('.visualDes').text(FeShoulderPushups.visualDes);
+				$('#FeShoulderPushups').mouseleave(function() {
+					$('#shoulDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#crabWalk').click(function() {
+		$('.descriptions').show(function() {
+			$('#shoulDes, .visualDes').slideDown('slow', function() {
+				$('#shoulDes').text(crabWalk.description);
+				$('.visualDes').text(crabWalk.visualDes);
+				$('#crabWalk').mouseleave(function() {
+					$('#shoulDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#wGpullups').click(function() {
+		$('.descriptions').show(function() {
+			$('#shoulDes, .visualDes').slideDown('slow', function() {
+				$('#shoulDes').text(wGpullups.description);
+				$('.visualDes').text(wGpullups.visualDes);
+				$('#wGpullups').mouseleave(function() {
+					$('#shoulDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#hStandPushups').click(function() {
+		$('.descriptions').show(function() {
+			$('#shoulDes, .visualDes').slideDown('slow', function() {
+				$('#shoulDes').text(hStandPushups.description);
+				$('.visualDes').text(hStandPushups.visualDes);
+				$('#hStandPushups').mouseleave(function() {
+					$('#shoulDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#oneArmPushups').click(function() {
+		$('.descriptions').show(function() {
+			$('#shoulDes, .visualDes').slideDown('slow', function() {
+				$('#shoulDes').text(oneArmPushups.description);
+				$('.visualDes').text(oneArmPushups.visualDes);
+				$('#oneArmPushups').mouseleave(function() {
+					$('#shoulDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});
+	});
+});
+$(document).ready(function() {
+	$('#shoulderPushups').click(function() {
+		$('.descriptions').show(function() {
+			$('#shoulDes, .visualDes').slideDown('slow', function() {
+				$('#shoulDes').text(shoulderPushups.description);
+				$('.visualDes').text(shoulderPushups.visualDes);
+				$('#shoulderPushups').mouseleave(function() {
+					$('#shoulDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
+			});
+		});	
+	});
+});
+// //**********************cardio page*********************
 
 $(document).ready(function() {
-	$('#RevSnowAngels').on('click', function() {
-		$('#backDes').slideToggle('slow', function() {
-			$('#backDes').text(RevSnowAngels.description).finish();
-			$('.visualDes').text(RevSnowAngels.visualDes);
-			$('#RevSnowAngels').mouseleave(function() {
-				$('#backDes').fadeOut('slow');
+	$('.descriptions').hide('fast');
+});
+$(document).ready(function() {
+	$('#Burpees').click(function() {
+		$('.descriptions').show(function() {
+			$('#cardioDes, .visualDes').slideDown('slow', function() {
+				$('#cardioDes').text(burpees.description);
+				$('.visualDes').text(burpees.visualDes);
+				$('#Burpees').mouseleave(function() {
+					$('#cardioDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#goodMornings').on('click', function() {
-		$('#backDes').slideToggle('slow', function() {
-			$('#backDes').text(goodMornings.description).finish();
-			$('.visualDes').text(goodMornings.visualDes);
-			$('#goodMornings').mouseleave(function() {
-				$('#backDes').fadeOut('slow');
+	$('#Walkouts').click(function() {
+		$('.descriptions').show(function() {
+			$('#cardioDes, .visualDes').slideDown('slow', function() {
+				$('#cardioDes').text(walkouts.description);
+				$('.visualDes').text(walkouts.visualDes);
+				$('#Walkouts').mouseleave(function() {
+					$('#cardioDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#supermans').on('click', function() {
-		$('#backDes').slideToggle('slow', function() {
-			$('#backDes').text(supermans.description).finish();
-			$('.visualDes').text(supermans.visualDes);
-			$('#supermans').mouseleave(function() {
-				$('#backDes').fadeOut('slow');
+	$('#Jumping').click(function() {
+		$('.descriptions').show(function() {	
+			$('#cardioDes, .visualDes').slideDown('slow', function() {
+				$('#cardioDes').text(jumpingLunges.description);
+				$('.visualDes').text(jumpingLunges.visualDes);
+				$('#Jumping').mouseleave(function() {
+					$('#cardioDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#dolphinKicks').on('click', function() {
-		$('#backDes').slideToggle('slow', function() {
-			$('#backDes').text(dolphinKicks.description);
-			$('.visualDes').text(dolphinKicks.visualDes);
-			$('#dolphinKicks').mouseleave(function() {
-				$('#backDes').fadeOut('slow');
+	$('#Pushups').click(function() {
+		$('.descriptions').show(function() {
+			$('#cardioDes, .visualDes').slideDown('slow', function() {
+				$('#cardioDes').text(pushups.description);
+				$('.visualDes').text(pushups.visualDes);
+				$('#Pushups').mouseleave(function() {
+					$('#cardioDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#bridge').on('click', function() {
-		$('#backDes').slideToggle('slow', function() {
-			$('#backDes').text(bridge.description).finish();
-			$('.visualDes').text(bridge.visualDes);
-			$('#bridge').mouseleave(function() {
-				$('#backDes').fadeOut('slow');
+	$('#weightSu').click(function() {
+		$('.descriptions').show(function() {	
+			$('#cardioDes, .visualDes').slideDown('slow', function() {
+				$('#cardioDes').text(weightedSitups.description);
+				$('.visualDes').text(weightedSitups.visualDes);
+				$('#weightSu').mouseleave(function() {
+					$('#cardioDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
 $(document).ready(function() {
-	$('#pPlacePushups').on('click', function() {
-		$('#backDes').slideToggle('slow', function() {
-			$('#backDes').text(pPlacePushups.description).finish();
-			$('.visualDes').text(pPlacePushups.visualDes);
-			$('#pPlacePushups').mouseleave(function() {
-				$('#backDes').fadeOut('slow');
+	$('#Pullups').click(function() {
+		$('.descriptions').show(function() {	
+			$('#cardioDes, .visualDes').slideDown('slow', function() {
+				$('#cardioDes').text(pullups.description);
+				$('.visualDes').text(pullups.visualDes);
+				$('#Pullups').mouseleave(function() {
+					$('#cardioDes, .visualDes').slideUp('slow');
+					$('.descriptions').hide('slow').finish();
+				});
 			});
 		});
 	});
 });
-$(document).ready(function() {
-	$('#swimmer').on('click', function() {
-		$('#backDes').slideToggle('slow', function() {
-			$('#backDes').text(swimmer.description);
-			$('.visualDes').text(swimmer.visualDes);
-			$('#swimmer').mouseleave(function() {
-				$('#backDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#rows').on('click', function() {
-		$('#backDes').slideToggle('slow', function() {
-			$('#backDes').text(rows.description);
-			$('.visualDes').text(rows.visualDes);
-			$('#rows').mouseleave(function() {
-				$('#backDes').fadeOut('slow');
-			});
-		});
-	});
-});
-//**********************Legs page***********************
-$(document).ready(function() {
-	$('#legDes').hide();('fast');
-});
-
-$(document).ready(function() {
-	$('#airSquats').on('click', function() {
-		$('#legDes').slideToggle('slow', function() {
-			$('#legDes').text(airSquats.description).finish();
-			$('.visualDes').text(airSquats.visualDes);
-			$('#airSquats').mouseleave(function() {
-				$('#legDes').fadeOut('slow').hide();
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#lunges').on('click', function() {
-		$('#legDes').slideToggle('slow', function() {
-			$('#legDes').text(lunges.description).finish();
-			$('.visualDes').text(lunges.visualDes);
-			$('#lunges').mouseleave(function() {
-				$('#legDes').fadeOut('slow').hide();
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#calfRaises').on('click', function() {
-		$('#legDes').slideToggle('slow', function() {
-			$('#legDes').text(calfRaises.description).finish();
-			$('.visualDes').text(calfRaises.visualDes);
-			$('#calfRaises').mouseleave(function() {
-				$('#legDes').fadeOut('slow').hide();
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#boxJumps').on('click', function() {
-		$('#legDes').slideToggle('slow', function() {
-			$('#legDes').text(boxJumps.description).finish();
-			$('.visualDes').text(boxJumps.visualDes);
-			$('#boxJumps').mouseleave(function() {
-				$('#legDes').fadeOut('slow').hide();
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#donkeyKicks').on('click', function() {
-		$('#legDes').slideToggle('slow', function() {
-			$('#legDes').text(donkeyKicks.description).finish();
-			$('.visualDes').text(donkeyKicks.visualDes);
-			$('#donkeyKicks').mouseleave(function() {
-				$('#legDes').fadeOut('slow').hide();
-			});
-		});
-	});
-});
-//********************Forearms page*********************
-$(document).ready(function() {
-	$('#foreDes').hide();('fast');
-});
-
-$(document).ready(function() {
-	$('#chairUps').on('click', function() {
-		$('#foreDes').slideToggle('slow', function() {
-			$('#foreDes').text(chairUps.description).finish();
-			$('.visualDes').text(chairUps.visualDes);
-			$('#chairUps').mouseleave(function() {
-				$('#foreDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#staticChairups').on('click', function() {
-		$('#foreDes').slideToggle('slow', function() {
-			$('#foreDes').text(staticChairUps.description).finish();
-			$('.visualDes').text(staticChairUps.visualDes);
-			$('#staticChairups').mouseleave(function() {
-				$('#foreDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#twistedSChairUps').on('click', function() {
-		$('#foreDes').slideToggle('slow', function() {
-			$('#foreDes').text(twistedSChairUps.description).finish();
-			$('.visualDes').text(twistedSChairUps.visualDes);
-			$('#twistedSChairUps').mouseleave(function() {
-				$('#foreDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#fingerHangs').on('click', function() {
-		$('#foreDes').slideToggle('slow', function() {
-			$('#foreDes').text(fingerHangs.description).finish();
-			$('.visualDes').text(fingerHangs.visualDes);
-			$('#fingerHangs').mouseleave(function() {
-				$('#foreDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#fingerPushups').on('click', function() {
-		$('#foreDes').slideToggle('slow', function() {
-			$('#foreDes').text(fingerPushups.description).finish();
-			$('.visualDes').text(fingerPushups.visualDes);
-			$('#fingerPushups').mouseleave(function() {
-				$('#foreDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#forearmCurls').on('click', function() {
-		$('#foreDes').slideToggle('slow', function() {
-			$('#foreDes').text(forearmCurls.description).finish();
-			$('.visualDes').text(forearmCurls.visualDes);
-			$('#forearmCurls').mouseleave(function() {
-				$('#foreDes').fadeOut('slow');
-			});
-		});
-	});
-});
-//********************Shoulders page********************
-$(document).ready(function() {
-	$('#shoulDes').hide();('fast');
-});
-
-$(document).ready(function() {
-	$('#FeShoulderPushups').on('click', function() {
-		$('#shoulDes').slideToggle('slow', function() {
-			$('#shoulDes').text(FeShoulderPushups.description).finish();
-			$('.visualDes').text(FeShoulderPushups.visualDes);
-			$('#FeShoulderPushups').mouseleave(function() {
-				$('#shoulDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#crabWalk').on('click', function() {
-		$('#shoulDes').slideToggle('slow', function() {
-			$('#shoulDes').text(crabWalk.description).finish();
-			$('.visualDes').text(crabWalk.visualDes);
-			$('#crabWalk').mouseleave(function() {
-				$('#shoulDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#wGpullups').on('click', function() {
-		$('#shoulDes').slideToggle('slow', function() {
-			$('#shoulDes').text(wGpullups.description).finish();
-			$('.visualDes').text(wGpullups.visualDes);
-			$('#wGpullups').mouseleave(function() {
-				$('#shoulDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#hStandPushups').on('click', function() {
-		$('#shoulDes').slideToggle('slow', function() {
-			$('#shoulDes').text(hStandPushups.description).finish();
-			$('.visualDes').text(hStandPushups.visualDes);
-			$('#hStandPushups').mouseleave(function() {
-				$('#shoulDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#oneArmPushups').on('click', function() {
-		$('#shoulDes').slideToggle('slow', function() {
-			$('#shoulDes').text(oneArmPushups.description).finish();
-			$('.visualDes').text(oneArmPushups.visualDes);
-			$('#oneArmPushups').mouseleave(function() {
-				$('#shoulDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#shoulderPushups').on('click', function() {
-		$('#shoulDes').slideToggle('slow', function() {
-			$('#shoulDes').text(shoulderPushups.description).finish();
-			$('.visualDes').text(shoulderPushups.visualDes);
-			$('#shoulderPushups').mouseleave(function() {
-				$('#shoulDes').fadeOut('slow');
-			});
-		});
-	});
-});
-//**********************cardio page*********************
-
-$(document).ready(function() {
-	$('#cardioDes').hide();('fast');
-});
-
-$(document).ready(function() {
-	$('#Burpees').on('click', function() {
-		$('#cardioDes').slideToggle('slow', function() {
-			$('#cardioDes').text(burpees.description).finish();
-			$('.visualDes').text(burpees.visualDes);
-			$('#Burpees').mouseleave(function() {
-				$('#cardioDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#Walkouts').on('click', function() {
-		$('#cardioDes').slideToggle('slow', function() {
-			$('#cardioDes').text(walkouts.description).finish();
-			$('.visualDes').text(walkouts.visualDes);
-			$('#Walkouts').mouseleave(function() {
-				$('#cardioDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#Jumping').on('click', function() {
-		$('#cardioDes').slideToggle('slow', function() {
-			$('#cardioDes').text(jumpingLunges.description).finish();
-			$('.visualDes').text(jumpingLunges.visualDes);
-			$('#Jumping').mouseleave(function() {
-				$('#cardioDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#Pushups').on('click', function() {
-		$('#cardioDes').slideToggle('slow', function() {
-			$('#cardioDes').text(pushups.description).finish();
-			$('.visualDes').text(pushups.visualDes);
-			$('#Pushups').mouseleave(function() {
-				$('#cardioDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#weightSu').on('click', function() {
-		$('#cardioDes').slideToggle('slow', function() {
-			$('#cardioDes').text(weightedSitups.description).finish();
-			$('.visualDes').text(weightedSitups.visualDes);
-			$('#weightSu').mouseleave(function() {
-				$('#cardioDes').fadeOut('slow');
-			});
-		});
-	});
-});
-$(document).ready(function() {
-	$('#Pullups').on('click', function() {
-		$('#cardioDes').slideToggle('slow', function() {
-			$('#cardioDes').text(pullups.description).finish();
-			$('.visualDes').text(pullups.visualDes);
-			$('#Pullups').mouseleave(function() {
-				$('#cardioDes').fadeOut('slow');
-			});
-		});
-	});
-});
-//********************Stopwatch*************************
+//********************stopwatch*************************
 	var time = 0;
 	var running = 0;
 
